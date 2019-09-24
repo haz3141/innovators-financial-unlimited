@@ -4,7 +4,8 @@ const router = express.Router();
 const { ensureAuthenticated } = require("../config/auth");
 
 // Welcome Page
-router.get("/", (req, res) => res.render("Welcome"));
+router.get("/", (req, res) => res.render("landing"));
+router.get("/welcome", (req, res) => res.render("Welcome"));
 
 // Dashborad
 router.get("/dashboard", ensureAuthenticated, (req, res) =>
