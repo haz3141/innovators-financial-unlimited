@@ -16,6 +16,10 @@ const UserSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  tokens: {
+    type: Number,
+    default: 300
   }
 });
 
